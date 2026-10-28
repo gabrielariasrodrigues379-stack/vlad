@@ -1,0 +1,257 @@
+/* Configurações Gerais */
+/* Importação da nova fonte (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #000;
+  color: #f5f5f7;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Barra de Navegação Global (Blur Apple Style) */
+.navbar {
+  background: rgba(22, 22, 23, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.nav-logo, .nav-icons a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-logo:hover, .nav-icons a:hover {
+  color: #fff;
+}
+
+/* Ribbon Promocional Topo */
+.ribbon {
+  margin-top: 44px;
+  background-color: #1d1d1f;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f5f5f7;
+}
+
+.ribbon a {
+  color: #2997ff;
+  font-weight: 400;
+}
+
+.ribbon a:hover {
+  text-decoration: underline;
+}
+
+/* Estrutura das Seções Hero */
+.hero {
+  position: relative;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 55px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.hero-dark {
+  background-color: #000;
+  color: #f5f5f7;
+}
+
+.hero-light {
+  background-color: #fbfbfd;
+  color: #1d1d1f;
+}
+
+.hero-content h2 {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.07143;
+}
+
+.hero-content h3 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.004em;
+  margin-top: 6px;
+}
+
+/* Botões e CTAs no Padrão Apple */
+.cta-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 21px;
+  border-radius: 980px;
+  font-size: 17px;
+  font-weight: 400;
+  transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btn-primary {
+  background-color: #0071e3;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0077ed;
+}
+
+.btn-outline {
+  border: 1px solid #0071e3;
+  color: #0071e3;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #0071e3;
+  color: #fff;
+}
+
+/* Imagens das Seções Hero */
+.hero-image-placeholder {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-placeholder img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Grid Secundário (Mosaico de Produtos) */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 100%;
+  padding: 0 12px;
+  margin-bottom: 12px;
+}
+
+.grid-card {
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.grid-card.dark {
+  background-color: #000;
+  color: #f5f5f7;
+}
+
+.grid-card.light {
+  background-color: #fbfbfd;
+  color: #1d1d1f;
+}
+
+.grid-card h2 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.002em;
+}
+
+.grid-card p {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* Rodapé Institucional */
+.footer {
+  background-color: #161617;
+  color: #86868b;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  border-top: 1px solid #424245;
+}
+
+.footer-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 833px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero-content h2 {
+    font-size: 40px;
+  }
+
+  .hero-content h3 {
+    font-size: 21px;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+}
